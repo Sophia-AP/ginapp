@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
 # Distribute your app as a gem
 # gemspec
 
@@ -33,7 +34,9 @@ gem 'padrino', '0.12.2'
 #   gem 'padrino-' + g, '0.12.2'
 # end
 
-# gem 'puma'
+group :production do
+  gem 'puma'
+end
 
 group :development do
   gem 'pry'
