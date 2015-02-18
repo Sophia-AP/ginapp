@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require style
+ *= require bootstrap
+ *= require jquery-anyslider
+ */
+
+/* SP - moved from bootstrap */
+.container { width: auto }
+body { padding-top: 0px; }
+footer { margin-top: 100px; }
+table, td, th { vertical-align: middle; border: none; }
+th { border-bottom: 1px solid #DDD; }
+a { cursor: pointer; }
+
+section {
+  width: 100%;
+  /*width: 800px;*/
+  margin: 20px auto;
+  height: 20%;
+}
+
+#home { padding-top: 0px; }
+
+#about {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  background-color:#fff;
+}
+
+#contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background:#fff;
+}
+
+#notice, #error {
+  background-color: inherit;
+  color: inherit;
+  border: inherit;
+  margin: inherit;
+  padding: inherit;
+}

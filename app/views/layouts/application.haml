@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title= t('pedal_pusher').html_safe
+    = favicon_tag('favicon.ico')
+    = stylesheet_link_tag('application', media: 'all')
+    = stylesheet_link_tag('turquoise', media: 'all')
+  %body
+    = yield
+  %footer
+    = javascript_include_tag('application')

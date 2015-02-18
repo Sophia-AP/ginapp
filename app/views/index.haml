@@ -1,0 +1,164 @@
+/ Home
+%section#home.section.section-home.fullscreen.one-slide.dark-section
+  .section-overlay
+  = image_tag('coffee_beans.jpg', width: 600)
+  .container.text-center
+    / Text Slider
+    -#.text-slider.owl-carousel.owl-theme
+    .slider1
+      .item.fit-text= ' '
+      .item.fit-text
+        The
+        %strong.accent-color Pedal
+        Pusher
+    .slider2
+      .item.fit-text= ' '
+      .item.fit-text
+        Is the
+        %strong.accent-color Coooolest
+    .slider1
+      .item.fit-text= ' '
+      .item.fit-text
+        %strong.accent-color Coffee
+        Is Rad
+  %a.btn-sys.btn-light.btn-border.btn-large.btn-crv.scroll-to{ href: '#about' }
+    More About This Button Being Broken
+    %i.icon-arrow-right2
+= partial('partials/navbar')
+/ About
+%section#about.section.about-section.light-section
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .section-title.text-center
+          %h1 About Us
+          %h2= t('pedal_pusher').html_safe
+          .title-icon
+            %span
+              %i= image_tag('pedal_pusher_logo.jpg', width: 25)
+          %p.lead
+            = t('about.blurb_before_accent').html_safe
+            -#%span.re-tooltip.accent-color{ 'data-placement' => 'bottom', title: 'Nice Tooltip' } accent text is important!
+            %span.accent-color= t('about.blurb_accent').html_safe
+            = t('about.beans')
+            = t('about.blurb_after_accent')
+        / Space
+        .hr{ style: 'margin-bottom:50px;'}
+/ Team
+%section#team.section.about-section.light-section
+  -#.section-overlay
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .section-title.text-center
+          %h1 Our Team
+          %h2
+            One
+            %strong.accent-color Rough
+            Crew
+          .title-icon
+            %span= image_tag('pedal_pusher_logo.jpg', width: 25)
+    .row
+      .col-xs-12.col-sm-6.col-md-3.col-md-offset-3
+        .member-box
+          .member-pic
+            = image_tag('gin.jpg', width: 200)
+          .member-details
+            %h4= t('gin.full_name').html_safe
+            %span.member-position= t('gin.title').html_safe
+            %p= t('gin.blurb').html_safe
+            %a.collapsed{ data: { 'toggle' => 'collapse' },  href: '#gin-show-more' }<
+              = t('.see_more', name: t('gin.first_name'))
+              %i.icon-arrow-right12
+            #gin-show-more.collapse
+              %p= t('gin.blurb_show_more').html_safe
+      .col-xs-12.col-sm-6.col-md-3
+        .member-box
+          .member-pic
+            = image_tag('tuff.jpg', width: 200)
+          .member-details
+            %h4= t('tuff.full_name').html_safe
+            %span.member-position= t('tuff.title').html_safe
+            %p= t('tuff.blurb').html_safe
+            %a.collapsed{ data: { 'toggle' => 'collapse' },  href: '#tuff-show-more' }<
+              = t('.see_more', name: t('tuff.first_name'))
+              %i.icon-arrow-right12
+            #tuff-show-more.collapse
+              %p= t('tuff.blurb_show_more').html_safe
+/ Find Us
+%section#locate.section.light-section
+  .section-overlay
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .section-title.text-center
+          %h1= t('locate.find_us').html_safe
+          %h2
+            Come
+            %strong.accent-color Find
+            Us
+          .title-icon
+            %span
+              = image_tag('pedal_pusher_logo.jpg', width: 25)
+    .row.text-center Really cool map thing goes here
+/ Contact
+%section#contact.section.contact-section.light-section
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        / Title
+        .section-title.text-center
+          %h1 Contact Us
+          %h2
+            Get In
+            %strong.accent-color Touch
+          .title-icon
+            %span
+              = image_tag('pedal_pusher_logo.jpg', width: 25)
+          %p.lead
+            = t('contact.blurb_before_accent').html_safe
+            %span.re-tooltip.accent-color= t('contact.blurb_accent').html_safe
+            = t('contact.blurb_after_accent').html_safe
+        / Space
+        .hr{ style: 'margin-bottom:50px;'}
+    .row
+      / Info Box
+      .col-xs-12.col-sm-4.col-md-4.map-info-box
+        %h3 Contact
+        .hr{ style: 'margin-bottom:8px;'}
+        %ul.icons-list
+          %li
+            %i.icon-phone-hang-up
+            %strong Phone:
+            = t('contact.phone').html_safe
+          %li
+            %i.icon-email2
+            %strong Email:
+            = t('contact.email').html_safe
+        -#%li
+            %i.icon-location3
+            %strong Address:
+            = t('contact.address').html_safe
+        .hr{ style: 'margin-bottom:35px;'}
+      / Contact Form
+      .col-xs-12.col-sm-8.col-md-8
+        #contant-form-bx.contant-form-bx
+          .contact-loader
+          -#%form#contact-form.contact-form{ action: '/sendmail', method: 'post', name: 'cform'}
+          %form{ action: '/send_message', method: 'post', name: 'cform'}
+            .row
+              .col-md-6
+                %label#name_label{ for: 'name'} Name
+                %span.name-missing Please enter your name
+                %input#name{name: 'name', size: '30', type: 'text', value: '' }
+              .col-md-6
+                %label#email_label{ for: 'e-mail'} Email
+                %span.email-missing Please enter a valid e-mail
+                %input#e-mail{name: 'email', size: '30', type: 'text', value: '' }
+              .col-md-12
+                %label#message_label{ for: 'message' } Message
+                %span.message-missing Say something
+                %textarea#message{ cols: '40', name: 'message', rows: '7' }
+              .col-md-12.text-right
+                %input#submit_btn.button{ name: 'submit', type: 'submit', value: 'Send Message' }
+                / End Contact Section

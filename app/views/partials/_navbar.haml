@@ -1,0 +1,20 @@
+/ Start Navbar Header
+%header#header.header-2.dark-header.sticky
+  .container
+    -##logo
+      %a{ href: '#'}
+        = image_tag('pedal_pusher_logo.png', width: 30)
+    / Toggle Menu - Responsive
+    %button.navbar-toggle{ 'data-target' => '#nav-menu', 'data-toggle' => 'collapse', type: 'button' }
+      %i.icon-menu2
+    / Navigation Menu
+    #nav-menu.nav-menu.collapse.navbar-collapse
+      %ul
+        %a{ href: '#home' }
+          = image_tag('pedal_pusher_logo.jpg', width: 25)
+        - @tabs.each do |tab|
+          %li
+            %a{ href: "##{tab.downcase}" }= tab
+    -#%div{ id: flash_type }
+      %p= msg.html_safe
+      .clear

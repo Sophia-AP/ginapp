@@ -1,0 +1,36 @@
+# Syntax
+# I18n.t('gin.title').html_safe
+# or,
+# t('about.blurb_before_accent').html_safe
+en:
+  pedal_pusher: "The Pedal Pusher"
+  see_more: "More about %{name}"
+  about:
+    blurb_before_accent: "We are experts in"
+    blurb_accent: "craft, organic, adjective coffee."
+    blurb_after_accent: "Coming soon to a neighborhood near you. Blurbby blurb blurberson."
+    beans: "Our beans come from a really cool place that beans come from."
+  gin:
+    first_name: "Ginny"
+    full_name: "Ginny Wilson"
+    title: "Owner, Founder, Coffee Cart Badass"
+    blurb: "I'm Ginny and I love two or three things in the world: coffee, my dog Tuff, and my bike, \"Mr. Bikey.\" Together we roam the streets in the disgusting early morning hours to bring you the BEST in waking-the-fuck-up strategies (specifically, drinking our coffee)."
+    blurb_accent: "I wish I knew then What I know now Wouldn't dive in Wouldn't bow down Gravity hurts You made it so sweet 'Til I woke up on On the concrete"
+    blurb_show_more: "We go here. We go there. We'll come to you. You come to us. We can also come to your next boring work function and liven shit up a bit."
+  tuff:
+    first_name: "Tuff"
+    full_name: "Tuff"
+    title: "Co-Owner, Manager, Protector"
+    blurb: ""
+    blurb_accent: "accent"
+    blurb_show_more: "We're pretty special."
+  contact:
+    blurb_before_accent: "Don't be a stranger."
+    blurb_accent: "Pedal Pusher wants to know what you have to say."
+    blurb_after_accent: "Hit us up with any questions, comments, or requests to visit your area."
+    phone: "(123) 456-7890"
+    email: "ginny@i_wanna_put_my_email_on_the_internet.com"
+#    email: "virginiafur@gmail.com"
+    error: "Uh oh. Our server is unable to send messages at this time. <a href='https://mail.google.com/mail/?view=cm&fs=1&to=sofsjunk@gmail.com'>Please try sending here.</a>"
+  locate:
+    find_us: "Today's Location"
